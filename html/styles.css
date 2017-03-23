@@ -1,0 +1,25 @@
+body {
+    background-image: url("sky.jpg");
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+input {
+    border-radius: 5em; 
+    width: 20em; 
+    text-align: center; 
+    height: 3em;
+    border: none;
+    background-color: rgba(60,60,60,1);
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
