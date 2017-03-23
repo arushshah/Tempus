@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Register</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,800" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div style="background-color: rgba(30,30,30,.6); text-align: center">
+                <h1 style="color: white; font-size: 4em; font-weight: 500">
+                T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S
+                </h1>
+            <blockquote style="color: white; font-family: 'Open Sans', sans-serif; font-size: 2em; text-align: center">Let's&nbsp;&nbsp;Get&nbsp;&nbsp;Things&nbsp;&nbsp;Done</blockquote>
+            
+        </div>
+        <div style="padding: 1em; background-color:rgba(150,150,150,0.8); margin-left: 35%; margin-right: 35%">
+            <h1 style="color: white; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 300">New Account</h1>
+            <br>
+            <form action="/newaccount" method="POST" style="text-align: center">
+                <div>
+                    <i class="fa fa-user-o fa-lg " aria-hidden="true " style="color: white; padding-right: .6em;"></i>
+                    <input type="text" name="firstName" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" style="color: white">
+                </div>
+                <br>
+                <div>
+                    <i class="fa fa-user-o fa-lg " aria-hidden="true " style="color: white; padding-right: .6em;"></i>
+                    <input type="text" name="lastName" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" style="color: white">
+                </div>
+                <br>
+                <div>
+                    <i class="fa fa-user-o fa-lg " aria-hidden="true " style="color: white; padding-right: .6em;"></i>
+                    <input type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" style="color: white">
+                </div>
+                <br>
+                <div>
+                    <i class="fa fa-lock fa-lg " aria-hidden="true " style="color: white; padding-right: .6em;"></i>
+                    <input type="password" name="password" placeholder="Password" style="color: white" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                </div>
+                <br>
+                <div style="color: red; text-align: center; position: relative; left: 1em"><br>{{message}}</div>
+                <div>
+                    <button type="submit" style="background-color: rgba(100,100,200,1); margin-left: 2em; color: white">Create My Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
+</div>
+</body>
+</html>

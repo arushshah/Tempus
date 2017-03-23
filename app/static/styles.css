@@ -1,0 +1,36 @@
+body {
+    background: url("sky.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+input {
+    border-radius: 5em;
+    width: 20em;
+    text-align: center;
+    height: 3em;
+    border: none;
+    background-color: rgba(60, 60, 60, 1);
+}
+
+button {
+    border-radius: 5em;
+    width: 20em;
+    text-align: center;
+    height: 3em;
+    border: none;
+    background-color: rgba(60, 60, 60, 1);
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+.clock {
+    height: 25em;
+    width: 25em;
+    border-radius: 100%;
+    padding: 0em;
+    background-color: rgba(10, 10, 10, .75);
+}
