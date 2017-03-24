@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Tempus</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,800" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-</head>
-
-<body>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12" style="left: 10em; text-align: left; background-color: rgba(30,30,30,.6); width: 30em; height: auto">
-                <h1 style="color: white; font-size: 2em; font-weight: 500">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tempus</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,800" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="left: 10em; text-align: left; background-color: rgba(30,30,30,.6); width: 30em; height: auto">
+                    <h1 style="color: white; font-size: 2em; font-weight: 500">
                     T&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;&nbsp;S
-                </h1>
+                    </h1>
                 <blockquote style="color: white; font-size: 1.1em; font-weight: 200; position: relative; text-align: right">Never fall behind again</blockquote>
             </div>
         </div>
-
         <div class="row" style="position: relative; top: 4em">
             <div class="col-md-6" style="left: 10em">
                 <div>
@@ -37,7 +31,7 @@
                     <h1 style="color: white; text-align: center; font-weight: 200">Login</h1>
                     <br>
                     <br>
-                    <form action="/welcome" method="POST" style="text-align: center ">
+                    <form action="/login" method="POST" style="text-align: center ">
                         <div>
                             <i class="fa fa-user-o fa-lg " aria-hidden="true " style="color: white; padding-right: .6em;"></i>
                             <input type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" style="color: white">
@@ -51,13 +45,12 @@
                             <button type="submit" style="background-color: rgba(100,100,200,1); margin-top: 3em; margin-left: 2em; color: white">Log In</button>
                         </div>
                     </form>
-                    <form action="/register" id="form">
-                        <a style="position: relative; left: 1em; top: 2em; color: white; cursor: pointer" onclick="form.submit()">Create an account now!</a>
-                    </form>
+                    
+                    <a style="position: relative; left: 1em; top: 2em; color: white; cursor: pointer" href="/register">Create an account now!</a>
+                    
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

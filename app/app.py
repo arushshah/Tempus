@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, make_response
 import mysql.connector
 
 app = Flask(__name__)
@@ -8,11 +8,12 @@ conn = mysql.connector.connect(host="localhost", user="root", password="root", d
 cur = conn.cursor()
 @app.route("/")
 def index():
+	print(request.cookies.get("username"))
 	return render_template("index.html")
 
-@app.route("/welcome", methods=["POST"])
-def welcome():
-
+@app.route("/login", methods=["POST"])
+def login():
+	print("LOGIN CALLED")
 	username = request.form['username']
 	password = request.form['password']
 	print(username)
@@ -28,8 +29,14 @@ def welcome():
 			userIndex = i
 			break
 	if (password in users[i]):
-		return "ok"
+		'''resp = redirect("/home")
+		resp.set_cookie("username", username)
+		resp.set_cookie("firstName", users[i][1])
+		resp.set_cookie("lastName", users[i][2])
+		return resp'''
+		return redirect("/calendar")
 	else:
+		print("Not")
 		return render_template("index.html", message = "Username or Password Incorrect")
 
 @app.route("/register")
@@ -42,11 +49,6 @@ def newaccount():
 	lastName = request.form['lastName']
 	username = request.form['username']
 	password = request.form['password']
-
-	print(firstName)
-	print(lastName)
-	print(username)
-	print(password)
 
 	if (len(firstName) == 0 or len(lastName) == 0 or len(username) == 0 or len(password) == 0):
 		return render_template("register.html", message="One or more fields is empty.")
@@ -62,6 +64,10 @@ def newaccount():
 	conn.commit()
 
 	return render_template("index.html", message="Account created! Please log in.")
+
+@app.route("/calendar")
+def calendar():
+	return render_template("calendar.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
